@@ -17,11 +17,8 @@ end
 
 def long_planeteer_calls(array)# code an argument here
   # Your code here
-  new_planet = []
-  array.collect do |name|
-    new_planet << name
-    return true if name.length > 4
-    return false if name.length < 4
+  array.any? do |word|
+    word.length > 4
   end
 end
 
